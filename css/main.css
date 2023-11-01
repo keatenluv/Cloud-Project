@@ -14,6 +14,15 @@ body {
     width: 100vw;
 }
 
+.image-viewer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
 .pics {
     display: flex;
     justify-content: center;
@@ -42,7 +51,65 @@ body {
     transform: rotate(180deg);
 }
 
-.image-gallery {
+.displayed-image {
     max-width: 50vw;
     max-height: 60vh;
+}
+
+.upload-button-div {
+    padding-top: 10px;
+    display: flex;
+    height: 5vh;
+}
+
+.upload-button {
+    cursor: pointer;
+}
+
+.upload-screen {
+    display: none;
+    background-color: white;
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    /* display: none; */
+}
+
+.back-arrow {
+    position: absolute;
+    transform: rotate(180deg);
+    max-width: 50px;
+    max-height: 50px;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.img-upload {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }

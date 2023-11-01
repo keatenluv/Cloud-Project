@@ -8,12 +8,37 @@
 
 <body>
     <div class="main">
-        <div class="pics">
-            <img id='image-gallery' class="image-gallery" src="./resources/totalbadasses/totalbadass.jpeg" >
+
+        <!---  Hidden when the webpage is displayed, visible when uploading frog image  ---->
+        <div id="upload-screen" class="upload-screen">
+            <img id="back-arrow" class="back-arrow" src="./resources/arrow.png" alt="back-arrow" onclick="uploadBack()">
+            <div id="upload" class="upload" >
+                <form id="upload-form" class="upload-form" onsubmit="submitForm(event)">
+                    <div id="img-upload" class="img-upload">
+                        <label for="img">Select image:</label>
+                        <input type="file" id="img" name="img" accept="image/*">
+                    </div>
+                    <div id="frog-name" class="frog-name">
+                        <label for="name">Name of Frog:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <input type="submit">
+                </form>
+            </div>
         </div>
-        <div class="navigation">
-            <img id='arrow-left' class="arrow arrow-left" src="./resources/arrow.png" alt="arrow left" onclick="imageLeft()">
-            <img id='arrow-right' class="arrow" src="./resources/arrow.png" alt="arrow right" onclick="imageRight()">
+
+        <!---   Displayed on page load, hidden when uploading frog image  --->
+        <div id="image-viewer" class="image-viewer">
+            <div class="pics">
+                <img id='displayed-image' class="displayed-image" src="./resources/totalbadasses/totalbadass.jpeg" >
+            </div>
+            <div class="navigation">
+                <img id='arrow-left' class="arrow arrow-left" src="./resources/arrow.png" alt="arrow left" onclick="imageLeft()">
+                <img id='arrow-right' class="arrow" src="./resources/arrow.png" alt="arrow right" onclick="imageRight()">
+            </div>
+            <div class="upload-button-div">
+                <button class="upload-button" onclick="uploadFrog()">Upload Frog</button>
+            </div>
         </div>
     </div>
 </body>
